@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int reversed=0,remiander,n,orignalno;
+cout<<"enter the number"<<endl;
+cin>>n;
+while(n!=0){
+    remiander=n%10;
+    reversed=reversed*10+remiander;
+    n=n/10;
+    if(orignalno==reversed){
+        cout<<"plaindrome"<<endl;
+    }
+    else{
+        cout<<"not plaindrome"<<endl;
+    }
+}
+    return 0;
+}

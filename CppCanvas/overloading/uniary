@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+ class nand
+ {
+     public:
+     int a,b;
+     void setdata(int x,int y){
+         
+     a=x; 
+     b=y;
+ 
+     }
+     void showdata();
+     void operator-();
+ };
+ void nand::showdata(){
+     cout<<a<<"  "<<b<<endl;
+     
+     
+ }
+ void nand::operator-(){
+     a=-a;
+     b=-b;
+     
+ }
+ int main(){
+     nand n1;
+     n1.setdata(3432,234);
+     n1.showdata();
+     -n1;
+     n1.showdata();
+ }

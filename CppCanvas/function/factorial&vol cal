@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int fact(int n);
+float volume(float r);
+
+int fact(int n) {
+    if(n < 2) {
+        return 1;
+    }
+    return n * fact(n - 1);
+}
+
+float volume(float r) {
+    return r * r * r;
+}
+
+int main() {
+    int n;
+    float r;
+    
+    cout << "Enter the value of r: ";
+    cin >> r;
+    
+    cout << "Enter the number: ";
+    cin >> n;
+    
+    cout << "Factorial of " << n << " is " << fact(n) << endl;
+    cout << "Volume of cube is " << volume(r) << endl;
+    
+    return 0;
+}

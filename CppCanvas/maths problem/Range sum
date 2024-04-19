@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+int sum_in_range(int x,int y){
+    int n=y-x+1;
+     int a=x;
+  //  int d=x2-x1;
+    return n/2*(2*a+(n-1)*1);
+     }
+    
+int main(){
+       int d;
+    
+    int x;
+    int y;
+    //int d;
+    cout<<"enter the value of x and y is :";
+    cin>>x>>y;
+    cout<<sum_in_range(x,y)<<endl;
+    return 0;
+    
+}

@@ -1,0 +1,32 @@
+// count the no of triplet whose sum is equal to the given value of x;
+// here is the code of the problem
+#include<iostream>
+using namespace std;
+int
+main ()
+{
+  int arr[] = { 12, 213, 4, 3, 64, 41 };
+  int size = 6;
+  int triplets = 0;
+  int target_sum = 229;
+  for (int i = 0; i < size; i++)
+    {
+      for (int j = i + 1; j < size; j++)
+	{
+	  for (int k = j + 1; k < size; k++)
+	    {
+	      if (arr[i] + arr[j] + arr[k] == target_sum)
+		{
+		  triplets++;
+		  cout<<arr[i]<<"and"<<arr[j]<<"and"<<arr[k]<<endl;
+
+		}
+	    }
+	}
+    }
+  cout << triplets << endl;
+  return 0;
+}
+
+
+ 

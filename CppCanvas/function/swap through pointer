@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int swap pointer(int* a,int* b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+    };
+    int main() {
+        int x=6,y=8;
+        cout<<"the value of x is "<<x<<"the value of "<<y;
+        swap pointer(&x,&y);
+        cout<<"the value of x is "<<x<<"the value of "<<y;
+    //cout<<"the value of 4 and 5 is" <<sum(4,5);
+    return 0;
+}    

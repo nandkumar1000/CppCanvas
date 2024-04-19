@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+union student;
+{
+    int roll;
+    int id;
+    char branch;
+
+};
+int main(){
+    union student nand;
+    nand.roll=44;
+    cout<<nand.roll<<endl;
+    return 0;
+
+}

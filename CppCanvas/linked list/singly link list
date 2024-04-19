@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+int main() {
+    Node* head = nullptr;
+    Node* one = nullptr;
+    Node* two = nullptr;
+    Node* three = nullptr;
+    Node* four = nullptr;
+    Node* five = nullptr;
+    Node* six = nullptr;
+
+    one = new Node;
+    two = new Node;
+    three = new Node;
+    four = new Node;
+    five = new Node;
+    six = new Node;
+
+    if (!one || !two || !three || !four || !five || !six) {
+        std::cout << "Memory allocation failed\n";
+        return 1;
+    }
+
+    one->data = 1;
+    two->data = 2;
+    three->data = 3;
+    four->data = 4;
+    five->data = 5;
+    six->data = 6;
+
+    head = one;
+    one->next = two;
+    two->next = three;
+    three->next = four;
+    four->next = five;
+    five->next = six;
+    six->next = nullptr;
+
+    Node* current = head;
+    while (current != nullptr) {
+        std::cout << current->data << "->";
+        current = current->next;
+    }
+    std::cout << "null\n";
+
+    delete one;
+    delete two;
+    delete three;
+    delete four;
+    delete five;
+    delete six;
+
+    return 0;
+}

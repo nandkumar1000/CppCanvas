@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int r=1;r<=n;r++){
+        for(int c=1;c<=r;c++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+// another method for same
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the value of n"<<endl;
+    cin>>n;
+    for(int r=1;r<=n;r++){
+        for(int c;c<=(n-1);c++){
+            cout<<" ";
+        }
+        for(int c=1;c<=(2*r-1);c++){
+            cout<<"*";
+        }
+       cout<<endl;
+    }
+    return 0;
+}

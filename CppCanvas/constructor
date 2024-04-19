@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class sample
+{
+  int a;
+  int b;
+public:
+  void getdata ();
+  void getdata (int x, int y);
+  void show ();
+ // ~void show();
+};
+void
+sample::getdata (int x, int y)
+{
+  a = x;
+  b = y;
+}
+
+void
+sample::show ()
+{
+  cout << a <<" " << b<<" " <<a+b<< endl;
+}
+
+// void sample::~show(){
+//     cout<<a<<b<<endl;
+// }
+
+int
+main ()
+{
+  sample s1,s2;
+  //s1.getdata();
+  
+  s2.getdata (23, 454);
+  s2.show();
+}
