@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstdlib>
+
+struct Node {
+    struct Node* next;
+    int data;
+};
+
+void traversal(Node* head) {
+    Node* p = head;
+    do {
+        std::cout << p->data << std::endl;
+        p = p->next;
+    } while (p != head);
+}
+
+Node* deletion(Node* head, Node* third) {
+    Node* p = head;
+    while (p->next != third) {
+        p = p->next;
+    }
+    head->next = p->next;
+    delete p;
+    return head;
+}
+
+int main() {
+    Node* head = new Node;
+    Node* second = new Node;
+    Node* third = new Node;
+    
+    head->data = 1;
+    head->next = second;
+    second->data = 2;
+    second->next = third;
+    third->data = 3;
+    third->next = head;
+
+    traversal(head);
+    std::cout << std::endl;
+
+    head = deletion(head, third);
+
+    traversal(head);
+
+    return 0;
+}

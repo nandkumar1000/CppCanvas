@@ -1,0 +1,27 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int
+main ()
+{
+  vector < int >v;
+  //vector<int> v={12,23,34,45,45};
+  v.push_back (12);
+  v.push_back (17);
+  v.push_back (16);
+  v.push_back (15);
+  v.push_back (14);
+  v.push_back (24);
+  int k = 3;
+  k = k % v.size ();
+  reverse (v.begin (), v.end ());
+  reverse (v.begin (), v.end () + k);
+  reverse (v.begin () + k, v.end ());
+// this is for each loop below;
+for (int a:v)
+    {
+      cout << a << " ";
+    }
+  cout << endl;
+  return 0;
+}

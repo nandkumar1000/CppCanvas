@@ -1,0 +1,28 @@
+
+//  FIND THE UNIQUE NUMBER in a given array where all the element are being repeated twice with one value being unique
+// here is the following code of problem 
+#include<iostream>
+using namespace std;
+int main ()
+{
+  int arr[] = { 12, 1343, 12, 1343, 3443, 45654654 };
+  int size = 6;
+  for (int i = 0; i < size; i++)
+    {
+      for (int j = i+1; j < size; j++)
+	{
+	  if (arr[i] == arr[j])
+	    {
+	      arr[i] = arr[j] = -1;
+	    }
+	}
+    }
+  for (int i = 0; i < size; i++)
+    {
+      if (arr[i] > 0)
+	{
+	  cout << arr[i] << endl;
+	}
+    }
+  return 0;
+}

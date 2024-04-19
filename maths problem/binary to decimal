@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int binary(int n){
+    int num=n;
+    int temp=num;
+    int value=0;
+    int base=1;
+    while(temp){
+        int last_digit=temp%10;
+        temp=temp/10;
+        value=value+last_digit*base;
+     
+        base=base*2;
+        
+    }
+    return value;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    
+    int x=binary(n);
+    cout<<x<<endl;
+   
+    return 0;
+}

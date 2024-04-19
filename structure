@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+struct employee;
+{
+  int cid;
+  float salary;
+  char fav character;
+  
+};
+int main(){
+  struct employee nand;
+  nand.cid=2;
+  nand.salary=45455554;
+  nand.fav character=d;
+  cout<<"the value is  "<<nand.cid<<endl;
+  return 0;
+}

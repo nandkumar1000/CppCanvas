@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int fun(long n){
+    int count=0;
+    for(int i=1;i<=n;i++){
+        n=n/10;
+        ++count;
+    }
+    return count;
+};
+int main(){
+    int n;
+    cout<<"enter the value of n"<<endl;
+    cin>>n;
+    cout<<fun( n)<<endl;
+    return 0;
+}
+
+// using while loop
+#include<iostream>
+using namespace std;
+int fun(long n){
+    int count=0;
+   while(n!=0){
+        count++;
+        n=n/10;
+     
+    }
+    return count;
+};
+int main(){
+    long n;
+    cout<<"enter the value of n"<<endl;
+    cin>>n;
+    cout<<fun(n)<<endl;
+    return 0;
+}

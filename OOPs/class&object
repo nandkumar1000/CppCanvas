@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+private:
+int a,b,c;
+public:
+int d,e,f;
+int a1,b1,c1,d1,e1,f1;
+void setdata(int a1,int b1,int c1);
+void getdata(){
+cout<<"the value of a is "<<a<<endl;
+cout<<"the value of b is "<<b<<endl;
+cout<<"the value of c is "<<c<<endl;
+cout<<"the value of d is "<<d<<endl;
+cout<<"the value of e is "<<e<<endl;
+cout<<"the value of f is "<<f<<endl;
+  
+}
+
+};
+
+  void employee::setdata(int a1, int b1, int c1)
+{
+  a=a1;
+  b=b1;
+  c=c1;
+  d=d1;
+  e=e1;
+  f=f1;
+}
+int main(){
+  employee nand;
+  nand.f=2;
+  nand.d=33;
+  nand.e=44;
+  nand.setdata(3344,445,55);
+  nand.getdata();
+  return 0;
+}

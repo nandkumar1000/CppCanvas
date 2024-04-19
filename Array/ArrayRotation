@@ -1,0 +1,36 @@
+// rotate the given array a by k steps where k is non-negaive note  k
+//  steps  where k is non-negative  note k can be greater than n as well where n is the size of array a.
+// here is the following code of the problem 
+#include <iostream>
+using namespace std;
+
+int 
+main ()
+{
+  int arr[] = { 12, 33, 44, 55, 65, 66 };
+  int n = 6;
+
+  int k = 2;
+  // k can be greater than be size;
+  k = k % n;
+  int ansarr[6];
+
+  int j = 0;
+  // insertion of last  k element  in array;;
+  for (int i = n - k; i < n; i++)
+    {
+      ansarr[j++] = arr[i];
+
+    }
+  // insertion the first element (size-k) into the array
+  for (int i = 0; i <= k; i++)
+    {
+      ansarr[j++] = arr[i];
+    }
+  for (int i = 0; i < n; i++)
+    {
+      cout << arr[i] << " ";
+    }
+  cout << endl;
+  return 0;
+}
